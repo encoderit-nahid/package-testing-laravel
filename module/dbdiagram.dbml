@@ -1,0 +1,205 @@
+Table users {
+  id integer [primary key]
+  name string
+  username string [note: "nullable"]
+  email string
+  email_verified_at datetime [note: "nullable"]
+  password string
+  avatar string [note: "nullable"]
+  status boolean
+  created_by integer [note: "nullable"]
+  updated_by integer [note: "nullable"]
+  timezone string [note: "nullable"]
+  last_login_at datetime [note: "nullable"]
+}
+
+Table units {
+  id integer [primary key]
+  name string
+  code string [note: "nullable"]
+  description string
+  is_active boolean
+  created_by integer [note: "nullable"]
+  updated_by integer [note: "nullable"]
+}
+
+Table unit_conversions {
+  id integer [primary key]
+  from_unit_id integer
+  to_unit_id integer
+  multiplier double
+}
+
+Table branches {
+  id integer [primary key]
+  name string
+  is_commissary boolean
+  code string
+  address string [note: "nullable"]
+  phone string [note: "nullable"]
+  email string [note: "nullable"]
+  is_active boolean
+  is_default boolean
+  logo string [note: "nullable"]
+  manager_id integer [note: "nullable"]
+  created_by integer [note: "nullable"]
+  updated_by integer [note: "nullable"]
+}
+
+Table categories {
+  id integer [primary key]
+  name string
+  code string
+  description string [note: "nullable"]
+  image string [note: "nullable"]
+  is_active boolean
+  parent_id integer [note: "nullable"]
+  created_by integer [note: "nullable"]
+  updated_by integer [note: "nullable"]
+}
+
+Table brands {
+  id integer [primary key]
+  name string
+  description string [note: "nullable"]
+  logo string [note: "nullable"]
+  is_active boolean
+  is_default boolean
+  created_by integer [note: "nullable"]
+  updated_by integer [note: "nullable"]
+}
+
+Table suppliers {
+  id integer [primary key]
+  name string
+  contact_person string [note: "nullable"]
+  email string [note: "nullable"]
+  phone string [note: "nullable"]
+  address string [note: "nullable"]
+}
+
+Table products {
+  id integer [primary key]
+  name string
+  code string
+  type string
+  description text [note: "nullable"]
+  image string [note: "nullable"]
+  is_active boolean
+  is_default boolean
+  created_by integer [note: "nullable"]
+  updated_by integer [note: "nullable"]
+}
+
+Table product_units {
+  id integer [primary key]
+  product_id integer
+  unit_price double
+  total_price double
+  quantity double
+  conversion_factor double
+  unit_id integer [note: "nullable"]
+  brand_id integer [note: "nullable"]
+  supplier_id integer [note: "nullable"]
+}
+
+Table recipes {
+  id integer [primary key]
+  name string
+  description text [note: "nullable"]
+  image string [note: "nullable"]
+  is_active boolean
+  created_by integer [note: "nullable"]
+  updated_by integer [note: "nullable"]
+}
+
+Table recipe_ingredients {
+  id integer [primary key]
+  recipe_id integer
+  product_id integer
+  quantity decimal
+  unit_id integer [note: "nullable"]
+}
+
+Table intermediate_products {
+  id integer [primary key]
+  product_id integer
+  name string
+  yield double
+}
+
+Table purchases {
+  id integer [primary key]
+  brand_id integer
+  supplier_id integer
+  purchase_date date
+  invoice_number string [note: "nullable"]
+  status string
+}
+
+Table purchase_items {
+  id integer [primary key]
+  purchase_id integer
+  product_id integer
+  unit_id integer
+  quantity double
+  unit_price double
+  total_price double
+}
+
+Table transfers {
+  id integer [primary key]
+  from_branch_id integer
+  to_branch_id integer
+  transfer_date datetime [note: "nullable"]
+  status string
+  notes text [note: "nullable"]
+  created_by integer [note: "nullable"]
+  updated_by integer [note: "nullable"]
+  deleted_at datetime
+}
+
+Table transfer_items {
+  id integer [primary key]
+  transfer_id integer
+  product_id integer
+  unit_id integer
+  quantity double
+  unit_price double
+}
+
+Table inventory_counts {
+  id integer [primary key]
+  branch_id integer
+  product_id integer
+  unit_id integer
+  quantity double
+  count_date date
+  deleted_at datetime
+}
+
+Ref: unit_conversions.from_unit_id > units.id
+Ref: unit_conversions.to_unit_id > units.id
+Ref: branches.manager_id > users.id
+Ref: categories.parent_id > categories.id
+Ref: product_units.product_id > products.id
+Ref: product_units.unit_id > units.id
+Ref: product_units.brand_id > brands.id
+Ref: product_units.supplier_id > suppliers.id
+Ref: recipe_ingredients.recipe_id > recipes.id
+Ref: recipe_ingredients.product_id > products.id
+Ref: recipe_ingredients.unit_id > units.id
+Ref: intermediate_products.product_id > products.id
+Ref: purchases.brand_id > brands.id
+Ref: purchases.supplier_id > suppliers.id
+Ref: purchase_items.purchase_id > purchases.id
+Ref: purchase_items.product_id > products.id
+Ref: purchase_items.unit_id > units.id
+Ref: transfers.from_branch_id > branches.id
+Ref: transfers.to_branch_id > branches.id
+Ref: transfer_items.transfer_id > transfers.id
+Ref: transfer_items.product_id > products.id
+Ref: transfer_items.unit_id > units.id
+Ref: inventory_counts.branch_id > branches.id
+Ref: inventory_counts.product_id > products.id
+Ref: inventory_counts.unit_id > units.id
