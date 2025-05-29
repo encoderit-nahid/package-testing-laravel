@@ -42,11 +42,12 @@ Product:
 #      model: User
 
 ProductUnit:
+  # and nested validation rule and postman request body
   requestParent: Product
   generate:
-    controller: true
-    service: true
-    request: true
+    controller: false
+    service: false
+    request: false
   fields:
     product_id: foreignId:products
     unit_price: double:default 0
@@ -71,6 +72,7 @@ ProductUnit:
       model: Supplier
 
 ProductImages:
+  # and nested validation rule and postman request body
   requestParent: ProductUnit
   generate:
     controller: true

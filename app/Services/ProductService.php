@@ -19,14 +19,12 @@ class ProductService
     public function update($request, Product $product)
     {
         $product->update($request);
-
         return $product;
     }
 
     public function delete(Product $product)
     {
         $product->delete();
-
         return $product;
     }
 }

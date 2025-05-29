@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductUnit extends Model
 {
+
     protected $fillable = [
         'product_id',
         'unit_price',
@@ -16,6 +17,7 @@ class ProductUnit extends Model
         'brand_id',
         'supplier_id',
     ];
+
 
     public function product()
     {

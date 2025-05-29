@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreignId('unit_id')->nullable()->constrained('units')->cascadeOnDelete();
             $table->foreignId('brand_id')->nullable()->constrained('brands')->cascadeOnDelete();
             $table->foreignId('supplier_id')->nullable()->constrained('suppliers')->cascadeOnDelete();
-
+            
             $table->timestamps();
         });
     }

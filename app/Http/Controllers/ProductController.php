@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
 use App\Http\Resources\Product\ProductCollection;
 use App\Http\Resources\Product\ProductResource;
 use App\Models\Product;
 use App\Services\ProductService;
 use App\Traits\ApiResponseTrait;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -15,7 +17,7 @@ class ProductController extends Controller implements HasMiddleware
 {
     use ApiResponseTrait;
 
-    public function __construct(protected ProductService $productService) {}
+    public function __construct(protected ProductService $productService){}
 
     public static function middleware(): array
     {
@@ -68,7 +70,7 @@ class ProductController extends Controller implements HasMiddleware
     public function destroy(Product $product): \Illuminate\Http\JsonResponse
     {
         try {
-            $this->productService->delete($product);
+             $this->productService->delete($product);
 
             return $this->success('Product deleted successfully');
         } catch (\Exception $e) {

@@ -1,0 +1,474 @@
+{
+    "info": {
+        "name": "Laravel API Collection",
+        "description": "Auto-generated from YAML schema",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_postman_id": "bc0b899b-d63c-492b-844a-3f52f931fc5f"
+    },
+    "item": [
+        {
+            "name": "Products",
+            "item": [
+                {
+                    "name": "Get All Products",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/v1/products",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "products"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Success Response",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/products",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "products"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"example_name\",\n            \"code\": \"example_code\",\n            \"type\": \"example_type\",\n            \"description\": \"This is an example description content.\",\n            \"image\": \"example_image\",\n            \"is_active\": true,\n            \"is_default\": false,\n            \"created_by\": 1,\n            \"updated_by\": 1,\n            \"created_at\": \"2025-05-29 05:25:33\",\n            \"updated_at\": \"2025-05-29 05:25:33\",\n            \"product_units\": [\n                {\n                    \"id\": 1,\n                    \"unit_price\": 10.5,\n                    \"total_price\": 10.5,\n                    \"quantity\": 10.5,\n                    \"conversion_factor\": 10.5,\n                    \"created_at\": \"2025-05-29 05:25:33\",\n                    \"updated_at\": \"2025-05-29 05:25:33\",\n                    \"product_images\": [\n                        {\n                            \"id\": 1,\n                            \"image\": \"example_image\",\n                            \"is_default\": false,\n                            \"created_at\": \"2025-05-29 05:25:33\",\n                            \"updated_at\": \"2025-05-29 05:25:33\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"example_name\",\n            \"code\": \"example_code\",\n            \"type\": \"example_type\",\n            \"description\": \"This is an example description content.\",\n            \"image\": \"example_image\",\n            \"is_active\": true,\n            \"is_default\": false,\n            \"created_by\": 1,\n            \"updated_by\": 1,\n            \"created_at\": \"2025-05-29 05:25:33\",\n            \"updated_at\": \"2025-05-29 05:25:33\",\n            \"product_units\": [\n                {\n                    \"id\": 1,\n                    \"unit_price\": 10.5,\n                    \"total_price\": 10.5,\n                    \"quantity\": 10.5,\n                    \"conversion_factor\": 10.5,\n                    \"created_at\": \"2025-05-29 05:25:33\",\n                    \"updated_at\": \"2025-05-29 05:25:33\",\n                    \"product_images\": [\n                        {\n                            \"id\": 1,\n                            \"image\": \"example_image\",\n                            \"is_default\": false,\n                            \"created_at\": \"2025-05-29 05:25:33\",\n                            \"updated_at\": \"2025-05-29 05:25:33\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"meta\": {\n        \"current_page\": 1,\n        \"per_page\": 15,\n        \"total\": 2,\n        \"last_page\": 1\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Product by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/v1/products/{{id}}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "products",
+                                "{{id}}"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Success Response",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/products/{{id}}",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "products",
+                                        "{{id}}"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"example_name\",\n        \"code\": \"example_code\",\n        \"type\": \"example_type\",\n        \"description\": \"This is an example description content.\",\n        \"image\": \"example_image\",\n        \"is_active\": true,\n        \"is_default\": false,\n        \"created_by\": 1,\n        \"updated_by\": 1,\n        \"created_at\": \"2025-05-29 05:25:33\",\n        \"updated_at\": \"2025-05-29 05:25:33\",\n        \"product_units\": [\n            {\n                \"id\": 1,\n                \"unit_price\": 10.5,\n                \"total_price\": 10.5,\n                \"quantity\": 10.5,\n                \"conversion_factor\": 10.5,\n                \"created_at\": \"2025-05-29 05:25:33\",\n                \"updated_at\": \"2025-05-29 05:25:33\",\n                \"product_images\": [\n                    {\n                        \"id\": 1,\n                        \"image\": \"example_image\",\n                        \"is_default\": false,\n                        \"created_at\": \"2025-05-29 05:25:33\",\n                        \"updated_at\": \"2025-05-29 05:25:33\"\n                    }\n                ]\n            }\n        ]\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Create Product",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/v1/products",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "products"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"example_name\",\n    \"code\": \"example_code\",\n    \"type\": \"example_type\",\n    \"description\": \"This is an example description content.\",\n    \"image\": \"example_image\",\n    \"is_active\": true,\n    \"is_default\": false,\n    \"created_by\": 1,\n    \"updated_by\": 1,\n    \"product_units\": [\n        {\n            \"unit_price\": 10.5,\n            \"total_price\": 10.5,\n            \"quantity\": 10.5,\n            \"conversion_factor\": 10.5,\n            \"product_images\": [\n                {\n                    \"image\": \"example_image\",\n                    \"is_default\": false\n                }\n            ]\n        }\n    ]\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Success Response",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/products",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "products"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"example_name\",\n    \"code\": \"example_code\",\n    \"type\": \"example_type\",\n    \"description\": \"This is an example description content.\",\n    \"image\": \"example_image\",\n    \"is_active\": true,\n    \"is_default\": false,\n    \"created_by\": 1,\n    \"updated_by\": 1,\n    \"product_units\": [\n        {\n            \"unit_price\": 10.5,\n            \"total_price\": 10.5,\n            \"quantity\": 10.5,\n            \"conversion_factor\": 10.5,\n            \"product_images\": [\n                {\n                    \"image\": \"example_image\",\n                    \"is_default\": false\n                }\n            ]\n        }\n    ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "status": "OK",
+                            "code": 201,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"example_name\",\n        \"code\": \"example_code\",\n        \"type\": \"example_type\",\n        \"description\": \"This is an example description content.\",\n        \"image\": \"example_image\",\n        \"is_active\": true,\n        \"is_default\": false,\n        \"created_by\": 1,\n        \"updated_by\": 1,\n        \"created_at\": \"2025-05-29 05:25:33\",\n        \"updated_at\": \"2025-05-29 05:25:33\",\n        \"product_units\": [\n            {\n                \"id\": 1,\n                \"unit_price\": 10.5,\n                \"total_price\": 10.5,\n                \"quantity\": 10.5,\n                \"conversion_factor\": 10.5,\n                \"created_at\": \"2025-05-29 05:25:33\",\n                \"updated_at\": \"2025-05-29 05:25:33\",\n                \"product_images\": [\n                    {\n                        \"id\": 1,\n                        \"image\": \"example_image\",\n                        \"is_default\": false,\n                        \"created_at\": \"2025-05-29 05:25:33\",\n                        \"updated_at\": \"2025-05-29 05:25:33\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"Product created successfully\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Update Product",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/v1/products/{{id}}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "products",
+                                "{{id}}"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"example_name\",\n    \"code\": \"example_code\",\n    \"type\": \"example_type\",\n    \"description\": \"This is an example description content.\",\n    \"image\": \"example_image\",\n    \"is_active\": true,\n    \"is_default\": false,\n    \"created_by\": 1,\n    \"updated_by\": 1,\n    \"product_units\": [\n        {\n            \"unit_price\": 10.5,\n            \"total_price\": 10.5,\n            \"quantity\": 10.5,\n            \"conversion_factor\": 10.5,\n            \"product_images\": [\n                {\n                    \"image\": \"example_image\",\n                    \"is_default\": false\n                }\n            ]\n        }\n    ],\n    \"id\": 1\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Success Response",
+                            "originalRequest": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/products/{{id}}",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "products",
+                                        "{{id}}"
+                                    ]
+                                },
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"example_name\",\n    \"code\": \"example_code\",\n    \"type\": \"example_type\",\n    \"description\": \"This is an example description content.\",\n    \"image\": \"example_image\",\n    \"is_active\": true,\n    \"is_default\": false,\n    \"created_by\": 1,\n    \"updated_by\": 1,\n    \"product_units\": [\n        {\n            \"unit_price\": 10.5,\n            \"total_price\": 10.5,\n            \"quantity\": 10.5,\n            \"conversion_factor\": 10.5,\n            \"product_images\": [\n                {\n                    \"image\": \"example_image\",\n                    \"is_default\": false\n                }\n            ]\n        }\n    ],\n    \"id\": 1\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"example_name\",\n        \"code\": \"example_code\",\n        \"type\": \"example_type\",\n        \"description\": \"This is an example description content.\",\n        \"image\": \"example_image\",\n        \"is_active\": true,\n        \"is_default\": false,\n        \"created_by\": 1,\n        \"updated_by\": 1,\n        \"created_at\": \"2025-05-29 05:25:33\",\n        \"updated_at\": \"2025-05-29 05:25:33\",\n        \"product_units\": [\n            {\n                \"id\": 1,\n                \"unit_price\": 10.5,\n                \"total_price\": 10.5,\n                \"quantity\": 10.5,\n                \"conversion_factor\": 10.5,\n                \"created_at\": \"2025-05-29 05:25:33\",\n                \"updated_at\": \"2025-05-29 05:25:33\",\n                \"product_images\": [\n                    {\n                        \"id\": 1,\n                        \"image\": \"example_image\",\n                        \"is_default\": false,\n                        \"created_at\": \"2025-05-29 05:25:33\",\n                        \"updated_at\": \"2025-05-29 05:25:33\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"Product updated successfully\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete Product",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/v1/products/{{id}}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "products",
+                                "{{id}}"
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Success Response",
+                            "originalRequest": {
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "key": "Authorization",
+                                        "value": "Bearer {{token}}",
+                                        "type": "text"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/api/v1/products/{{id}}",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "api",
+                                        "v1",
+                                        "products",
+                                        "{{id}}"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Resource deleted successfully\"\n}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "{{base-url",
+            "type": "string"
+        },
+        {
+            "key": "token",
+            "value": "",
+            "type": "string"
+        }
+    ]
+}
