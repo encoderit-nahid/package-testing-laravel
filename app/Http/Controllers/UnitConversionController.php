@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\UnitConversionRequest;
 use App\Http\Resources\UnitConversion\UnitConversionCollection;
 use App\Http\Resources\UnitConversion\UnitConversionResource;
 use App\Models\UnitConversion;
 use App\Services\UnitConversionService;
 use App\Traits\ApiResponseTrait;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -15,7 +17,7 @@ class UnitConversionController extends Controller implements HasMiddleware
 {
     use ApiResponseTrait;
 
-    public function __construct(protected UnitConversionService $unitConversionService) {}
+    public function __construct(protected UnitConversionService $unitConversionService){}
 
     public static function middleware(): array
     {
@@ -68,7 +70,7 @@ class UnitConversionController extends Controller implements HasMiddleware
     public function destroy(UnitConversion $unitConversion): \Illuminate\Http\JsonResponse
     {
         try {
-            $this->unitConversionService->delete($unitConversion);
+             $this->unitConversionService->delete($unitConversion);
 
             return $this->success('UnitConversion deleted successfully');
         } catch (\Exception $e) {

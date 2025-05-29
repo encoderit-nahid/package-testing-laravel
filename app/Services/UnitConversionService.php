@@ -19,14 +19,12 @@ class UnitConversionService
     public function update($request, UnitConversion $unitConversion)
     {
         $unitConversion->update($request);
-
         return $unitConversion;
     }
 
     public function delete(UnitConversion $unitConversion)
     {
         $unitConversion->delete();
-
         return $unitConversion;
     }
 }

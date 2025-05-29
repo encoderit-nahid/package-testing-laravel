@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Branch extends Model
 {
+
     protected $fillable = [
         'name',
         'is_commissary',
@@ -20,6 +21,7 @@ class Branch extends Model
         'created_by',
         'updated_by',
     ];
+
 
     public function manager()
     {

@@ -14,7 +14,7 @@ class BrandRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string',
+                        'name' => 'required|string',
             'description' => 'nullable|string',
             'logo' => 'nullable|string',
             'is_active' => 'required|boolean',

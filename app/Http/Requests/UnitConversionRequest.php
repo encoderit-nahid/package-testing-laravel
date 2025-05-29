@@ -14,7 +14,7 @@ class UnitConversionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'from_unit_id' => 'required|exists:units,id',
+                        'from_unit_id' => 'required|exists:units,id',
             'to_unit_id' => 'required|exists:units,id',
             'multiplier' => 'required',
         ];

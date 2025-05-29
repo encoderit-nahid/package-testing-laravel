@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\UnitRequest;
 use App\Http\Resources\Unit\UnitCollection;
 use App\Http\Resources\Unit\UnitResource;
 use App\Models\Unit;
 use App\Services\UnitService;
 use App\Traits\ApiResponseTrait;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -15,7 +17,7 @@ class UnitController extends Controller implements HasMiddleware
 {
     use ApiResponseTrait;
 
-    public function __construct(protected UnitService $unitService) {}
+    public function __construct(protected UnitService $unitService){}
 
     public static function middleware(): array
     {
@@ -68,7 +70,7 @@ class UnitController extends Controller implements HasMiddleware
     public function destroy(Unit $unit): \Illuminate\Http\JsonResponse
     {
         try {
-            $this->unitService->delete($unit);
+             $this->unitService->delete($unit);
 
             return $this->success('Unit deleted successfully');
         } catch (\Exception $e) {

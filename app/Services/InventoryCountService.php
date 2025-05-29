@@ -19,14 +19,12 @@ class InventoryCountService
     public function update($request, InventoryCount $inventoryCount)
     {
         $inventoryCount->update($request);
-
         return $inventoryCount;
     }
 
     public function delete(InventoryCount $inventoryCount)
     {
         $inventoryCount->delete();
-
         return $inventoryCount;
     }
 }

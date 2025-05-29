@@ -6,12 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class RecipeIngredient extends Model
 {
+
     protected $fillable = [
         'recipe_id',
         'product_id',
         'quantity',
         'unit_id',
     ];
+
 
     public function recipe()
     {

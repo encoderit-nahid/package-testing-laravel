@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\PurchaseRequest;
 use App\Http\Resources\Purchase\PurchaseCollection;
 use App\Http\Resources\Purchase\PurchaseResource;
 use App\Models\Purchase;
 use App\Services\PurchaseService;
 use App\Traits\ApiResponseTrait;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -15,7 +17,7 @@ class PurchaseController extends Controller implements HasMiddleware
 {
     use ApiResponseTrait;
 
-    public function __construct(protected PurchaseService $purchaseService) {}
+    public function __construct(protected PurchaseService $purchaseService){}
 
     public static function middleware(): array
     {
@@ -68,7 +70,7 @@ class PurchaseController extends Controller implements HasMiddleware
     public function destroy(Purchase $purchase): \Illuminate\Http\JsonResponse
     {
         try {
-            $this->purchaseService->delete($purchase);
+             $this->purchaseService->delete($purchase);
 
             return $this->success('Purchase deleted successfully');
         } catch (\Exception $e) {

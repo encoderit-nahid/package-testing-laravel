@@ -19,14 +19,12 @@ class CategoryService
     public function update($request, Category $category)
     {
         $category->update($request);
-
         return $category;
     }
 
     public function delete(Category $category)
     {
         $category->delete();
-
         return $category;
     }
 }

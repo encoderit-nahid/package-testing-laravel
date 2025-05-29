@@ -19,14 +19,12 @@ class SupplierService
     public function update($request, Supplier $supplier)
     {
         $supplier->update($request);
-
         return $supplier;
     }
 
     public function delete(Supplier $supplier)
     {
         $supplier->delete();
-
         return $supplier;
     }
 }

@@ -14,7 +14,7 @@ class PurchaseRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'brand_id' => 'required|exists:brands,id',
+                        'brand_id' => 'required|exists:brands,id',
             'supplier_id' => 'required|exists:suppliers,id',
             'purchase_date' => 'required',
             'invoice_number' => 'nullable|string',

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Purchase extends Model
 {
+
     protected $fillable = [
         'brand_id',
         'supplier_id',
@@ -13,6 +14,7 @@ class Purchase extends Model
         'invoice_number',
         'status',
     ];
+
 
     public function brand()
     {
