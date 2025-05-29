@@ -23,7 +23,6 @@ class ProductRequest extends FormRequest
             'is_default' => 'required|boolean',
             'created_by' => 'nullable|exists:users,id',
             'updated_by' => 'nullable|exists:users,id',
-
             'product_units' => 'nullable|array',
             'product_units.*' => 'required|array',
             'product_units.*.unit_price' => 'required',
@@ -33,7 +32,6 @@ class ProductRequest extends FormRequest
             'product_units.*.unit_id' => 'nullable|exists:units,id',
             'product_units.*.brand_id' => 'nullable|exists:brands,id',
             'product_units.*.supplier_id' => 'nullable|exists:suppliers,id',
-
             'product_units.*.product_images' => 'nullable|array',
             'product_units.*.product_images.*' => 'required|array',
             'product_units.*.product_images.*.image' => 'required|string',

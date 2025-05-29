@@ -19,12 +19,14 @@ class ProductImagesService
     public function update($request, ProductImages $productImages)
     {
         $productImages->update($request);
+
         return $productImages;
     }
 
     public function delete(ProductImages $productImages)
     {
         $productImages->delete();
+
         return $productImages;
     }
 }

@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductImagesRequest;
 use App\Http\Resources\ProductImages\ProductImagesCollection;
 use App\Http\Resources\ProductImages\ProductImagesResource;
 use App\Models\ProductImages;
 use App\Services\ProductImagesService;
 use App\Traits\ApiResponseTrait;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -17,7 +15,7 @@ class ProductImagesController extends Controller implements HasMiddleware
 {
     use ApiResponseTrait;
 
-    public function __construct(protected ProductImagesService $productImagesService){}
+    public function __construct(protected ProductImagesService $productImagesService) {}
 
     public static function middleware(): array
     {
@@ -70,7 +68,7 @@ class ProductImagesController extends Controller implements HasMiddleware
     public function destroy(ProductImages $productImages): \Illuminate\Http\JsonResponse
     {
         try {
-             $this->productImagesService->delete($productImages);
+            $this->productImagesService->delete($productImages);
 
             return $this->success('ProductImages deleted successfully');
         } catch (\Exception $e) {
