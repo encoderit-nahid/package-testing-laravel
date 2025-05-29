@@ -3,7 +3,7 @@
         "name": "Laravel API Collection",
         "description": "Auto-generated from YAML schema",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-        "_postman_id": "94b0f1cb-0339-4dbc-b00f-4f4fcac25365"
+        "_postman_id": "69d47d95-e389-4222-8010-6e742c3c1268"
     },
     "item": [
         {
@@ -31,12 +31,13 @@
                             }
                         ],
                         "url": {
-                            "raw": "{{baseUrl}}/api/products",
+                            "raw": "{{baseUrl}}/api/v1/products",
                             "host": [
                                 "{{baseUrl}}"
                             ],
                             "path": [
                                 "api",
+                                "v1",
                                 "products"
                             ]
                         }
@@ -64,12 +65,13 @@
                                     }
                                 ],
                                 "url": {
-                                    "raw": "{{baseUrl}}/api/products",
+                                    "raw": "{{baseUrl}}/api/v1/products",
                                     "host": [
                                         "{{baseUrl}}"
                                     ],
                                     "path": [
                                         "api",
+                                        "v1",
                                         "products"
                                     ]
                                 }
@@ -84,7 +86,7 @@
                                 }
                             ],
                             "cookie": [],
-                            "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"example_name\",\n            \"code\": \"example_code\",\n            \"type\": \"example_type\",\n            \"description\": \"This is an example description content.\",\n            \"image\": \"example_image\",\n            \"is_active\": true,\n            \"is_default\": false,\n            \"created_by\": 1,\n            \"updated_by\": 1,\n            \"created_at\": \"2025-05-29 04:55:27\",\n            \"updated_at\": \"2025-05-29 04:55:27\",\n            \"product_units\": [\n                {\n                    \"id\": 1,\n                    \"unit_price\": 10.5,\n                    \"total_price\": 10.5,\n                    \"quantity\": 10.5,\n                    \"conversion_factor\": 10.5,\n                    \"created_at\": \"2025-05-29 04:55:27\",\n                    \"updated_at\": \"2025-05-29 04:55:27\",\n                    \"product_images\": [\n                        {\n                            \"id\": 1,\n                            \"image\": \"example_image\",\n                            \"is_default\": false,\n                            \"created_at\": \"2025-05-29 04:55:27\",\n                            \"updated_at\": \"2025-05-29 04:55:27\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"example_name\",\n            \"code\": \"example_code\",\n            \"type\": \"example_type\",\n            \"description\": \"This is an example description content.\",\n            \"image\": \"example_image\",\n            \"is_active\": true,\n            \"is_default\": false,\n            \"created_by\": 1,\n            \"updated_by\": 1,\n            \"created_at\": \"2025-05-29 04:55:27\",\n            \"updated_at\": \"2025-05-29 04:55:27\",\n            \"product_units\": [\n                {\n                    \"id\": 1,\n                    \"unit_price\": 10.5,\n                    \"total_price\": 10.5,\n                    \"quantity\": 10.5,\n                    \"conversion_factor\": 10.5,\n                    \"created_at\": \"2025-05-29 04:55:27\",\n                    \"updated_at\": \"2025-05-29 04:55:27\",\n                    \"product_images\": [\n                        {\n                            \"id\": 1,\n                            \"image\": \"example_image\",\n                            \"is_default\": false,\n                            \"created_at\": \"2025-05-29 04:55:27\",\n                            \"updated_at\": \"2025-05-29 04:55:27\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"meta\": {\n        \"current_page\": 1,\n        \"per_page\": 15,\n        \"total\": 2,\n        \"last_page\": 1\n    }\n}"
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"example_name\",\n            \"code\": \"example_code\",\n            \"type\": \"example_type\",\n            \"description\": \"This is an example description content.\",\n            \"image\": \"example_image\",\n            \"is_active\": true,\n            \"is_default\": false,\n            \"created_by\": 1,\n            \"updated_by\": 1,\n            \"created_at\": \"2025-05-29 12:14:12\",\n            \"updated_at\": \"2025-05-29 12:14:12\",\n            \"product_units\": [\n                {\n                    \"id\": 1,\n                    \"unit_price\": 10.5,\n                    \"total_price\": 10.5,\n                    \"quantity\": 10.5,\n                    \"conversion_factor\": 10.5,\n                    \"created_at\": \"2025-05-29 12:14:12\",\n                    \"updated_at\": \"2025-05-29 12:14:12\",\n                    \"product_images\": [\n                        {\n                            \"id\": 1,\n                            \"image\": \"example_image\",\n                            \"is_default\": false,\n                            \"created_at\": \"2025-05-29 12:14:12\",\n                            \"updated_at\": \"2025-05-29 12:14:12\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"example_name\",\n            \"code\": \"example_code\",\n            \"type\": \"example_type\",\n            \"description\": \"This is an example description content.\",\n            \"image\": \"example_image\",\n            \"is_active\": true,\n            \"is_default\": false,\n            \"created_by\": 1,\n            \"updated_by\": 1,\n            \"created_at\": \"2025-05-29 12:14:12\",\n            \"updated_at\": \"2025-05-29 12:14:12\",\n            \"product_units\": [\n                {\n                    \"id\": 1,\n                    \"unit_price\": 10.5,\n                    \"total_price\": 10.5,\n                    \"quantity\": 10.5,\n                    \"conversion_factor\": 10.5,\n                    \"created_at\": \"2025-05-29 12:14:12\",\n                    \"updated_at\": \"2025-05-29 12:14:12\",\n                    \"product_images\": [\n                        {\n                            \"id\": 1,\n                            \"image\": \"example_image\",\n                            \"is_default\": false,\n                            \"created_at\": \"2025-05-29 12:14:12\",\n                            \"updated_at\": \"2025-05-29 12:14:12\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"meta\": {\n        \"current_page\": 1,\n        \"per_page\": 15,\n        \"total\": 2,\n        \"last_page\": 1\n    }\n}"
                         }
                     ]
                 },
@@ -110,12 +112,13 @@
                             }
                         ],
                         "url": {
-                            "raw": "{{baseUrl}}/api/products/{{id}}",
+                            "raw": "{{baseUrl}}/api/v1/products/{{id}}",
                             "host": [
                                 "{{baseUrl}}"
                             ],
                             "path": [
                                 "api",
+                                "v1",
                                 "products",
                                 "{{id}}"
                             ]
@@ -144,12 +147,13 @@
                                     }
                                 ],
                                 "url": {
-                                    "raw": "{{baseUrl}}/api/products/{{id}}",
+                                    "raw": "{{baseUrl}}/api/v1/products/{{id}}",
                                     "host": [
                                         "{{baseUrl}}"
                                     ],
                                     "path": [
                                         "api",
+                                        "v1",
                                         "products",
                                         "{{id}}"
                                     ]
@@ -165,7 +169,7 @@
                                 }
                             ],
                             "cookie": [],
-                            "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"example_name\",\n        \"code\": \"example_code\",\n        \"type\": \"example_type\",\n        \"description\": \"This is an example description content.\",\n        \"image\": \"example_image\",\n        \"is_active\": true,\n        \"is_default\": false,\n        \"created_by\": 1,\n        \"updated_by\": 1,\n        \"created_at\": \"2025-05-29 04:55:27\",\n        \"updated_at\": \"2025-05-29 04:55:27\",\n        \"product_units\": [\n            {\n                \"id\": 1,\n                \"unit_price\": 10.5,\n                \"total_price\": 10.5,\n                \"quantity\": 10.5,\n                \"conversion_factor\": 10.5,\n                \"created_at\": \"2025-05-29 04:55:27\",\n                \"updated_at\": \"2025-05-29 04:55:27\",\n                \"product_images\": [\n                    {\n                        \"id\": 1,\n                        \"image\": \"example_image\",\n                        \"is_default\": false,\n                        \"created_at\": \"2025-05-29 04:55:27\",\n                        \"updated_at\": \"2025-05-29 04:55:27\"\n                    }\n                ]\n            }\n        ]\n    }\n}"
+                            "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"example_name\",\n        \"code\": \"example_code\",\n        \"type\": \"example_type\",\n        \"description\": \"This is an example description content.\",\n        \"image\": \"example_image\",\n        \"is_active\": true,\n        \"is_default\": false,\n        \"created_by\": 1,\n        \"updated_by\": 1,\n        \"created_at\": \"2025-05-29 12:14:12\",\n        \"updated_at\": \"2025-05-29 12:14:12\",\n        \"product_units\": [\n            {\n                \"id\": 1,\n                \"unit_price\": 10.5,\n                \"total_price\": 10.5,\n                \"quantity\": 10.5,\n                \"conversion_factor\": 10.5,\n                \"created_at\": \"2025-05-29 12:14:12\",\n                \"updated_at\": \"2025-05-29 12:14:12\",\n                \"product_images\": [\n                    {\n                        \"id\": 1,\n                        \"image\": \"example_image\",\n                        \"is_default\": false,\n                        \"created_at\": \"2025-05-29 12:14:12\",\n                        \"updated_at\": \"2025-05-29 12:14:12\"\n                    }\n                ]\n            }\n        ]\n    }\n}"
                         }
                     ]
                 },
@@ -191,12 +195,13 @@
                             }
                         ],
                         "url": {
-                            "raw": "{{baseUrl}}/api/products",
+                            "raw": "{{baseUrl}}/api/v1/products",
                             "host": [
                                 "{{baseUrl}}"
                             ],
                             "path": [
                                 "api",
+                                "v1",
                                 "products"
                             ]
                         },
@@ -233,12 +238,13 @@
                                     }
                                 ],
                                 "url": {
-                                    "raw": "{{baseUrl}}/api/products",
+                                    "raw": "{{baseUrl}}/api/v1/products",
                                     "host": [
                                         "{{baseUrl}}"
                                     ],
                                     "path": [
                                         "api",
+                                        "v1",
                                         "products"
                                     ]
                                 },
@@ -262,7 +268,7 @@
                                 }
                             ],
                             "cookie": [],
-                            "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"example_name\",\n        \"code\": \"example_code\",\n        \"type\": \"example_type\",\n        \"description\": \"This is an example description content.\",\n        \"image\": \"example_image\",\n        \"is_active\": true,\n        \"is_default\": false,\n        \"created_by\": 1,\n        \"updated_by\": 1,\n        \"created_at\": \"2025-05-29 04:55:27\",\n        \"updated_at\": \"2025-05-29 04:55:27\",\n        \"product_units\": [\n            {\n                \"id\": 1,\n                \"unit_price\": 10.5,\n                \"total_price\": 10.5,\n                \"quantity\": 10.5,\n                \"conversion_factor\": 10.5,\n                \"created_at\": \"2025-05-29 04:55:27\",\n                \"updated_at\": \"2025-05-29 04:55:27\",\n                \"product_images\": [\n                    {\n                        \"id\": 1,\n                        \"image\": \"example_image\",\n                        \"is_default\": false,\n                        \"created_at\": \"2025-05-29 04:55:27\",\n                        \"updated_at\": \"2025-05-29 04:55:27\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"Product created successfully\"\n}"
+                            "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"example_name\",\n        \"code\": \"example_code\",\n        \"type\": \"example_type\",\n        \"description\": \"This is an example description content.\",\n        \"image\": \"example_image\",\n        \"is_active\": true,\n        \"is_default\": false,\n        \"created_by\": 1,\n        \"updated_by\": 1,\n        \"created_at\": \"2025-05-29 12:14:12\",\n        \"updated_at\": \"2025-05-29 12:14:12\",\n        \"product_units\": [\n            {\n                \"id\": 1,\n                \"unit_price\": 10.5,\n                \"total_price\": 10.5,\n                \"quantity\": 10.5,\n                \"conversion_factor\": 10.5,\n                \"created_at\": \"2025-05-29 12:14:12\",\n                \"updated_at\": \"2025-05-29 12:14:12\",\n                \"product_images\": [\n                    {\n                        \"id\": 1,\n                        \"image\": \"example_image\",\n                        \"is_default\": false,\n                        \"created_at\": \"2025-05-29 12:14:12\",\n                        \"updated_at\": \"2025-05-29 12:14:12\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"Product created successfully\"\n}"
                         }
                     ]
                 },
@@ -288,12 +294,13 @@
                             }
                         ],
                         "url": {
-                            "raw": "{{baseUrl}}/api/products/{{id}}",
+                            "raw": "{{baseUrl}}/api/v1/products/{{id}}",
                             "host": [
                                 "{{baseUrl}}"
                             ],
                             "path": [
                                 "api",
+                                "v1",
                                 "products",
                                 "{{id}}"
                             ]
@@ -331,12 +338,13 @@
                                     }
                                 ],
                                 "url": {
-                                    "raw": "{{baseUrl}}/api/products/{{id}}",
+                                    "raw": "{{baseUrl}}/api/v1/products/{{id}}",
                                     "host": [
                                         "{{baseUrl}}"
                                     ],
                                     "path": [
                                         "api",
+                                        "v1",
                                         "products",
                                         "{{id}}"
                                     ]
@@ -361,7 +369,7 @@
                                 }
                             ],
                             "cookie": [],
-                            "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"example_name\",\n        \"code\": \"example_code\",\n        \"type\": \"example_type\",\n        \"description\": \"This is an example description content.\",\n        \"image\": \"example_image\",\n        \"is_active\": true,\n        \"is_default\": false,\n        \"created_by\": 1,\n        \"updated_by\": 1,\n        \"created_at\": \"2025-05-29 04:55:27\",\n        \"updated_at\": \"2025-05-29 04:55:27\",\n        \"product_units\": [\n            {\n                \"id\": 1,\n                \"unit_price\": 10.5,\n                \"total_price\": 10.5,\n                \"quantity\": 10.5,\n                \"conversion_factor\": 10.5,\n                \"created_at\": \"2025-05-29 04:55:27\",\n                \"updated_at\": \"2025-05-29 04:55:27\",\n                \"product_images\": [\n                    {\n                        \"id\": 1,\n                        \"image\": \"example_image\",\n                        \"is_default\": false,\n                        \"created_at\": \"2025-05-29 04:55:27\",\n                        \"updated_at\": \"2025-05-29 04:55:27\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"Product updated successfully\"\n}"
+                            "body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"example_name\",\n        \"code\": \"example_code\",\n        \"type\": \"example_type\",\n        \"description\": \"This is an example description content.\",\n        \"image\": \"example_image\",\n        \"is_active\": true,\n        \"is_default\": false,\n        \"created_by\": 1,\n        \"updated_by\": 1,\n        \"created_at\": \"2025-05-29 12:14:12\",\n        \"updated_at\": \"2025-05-29 12:14:12\",\n        \"product_units\": [\n            {\n                \"id\": 1,\n                \"unit_price\": 10.5,\n                \"total_price\": 10.5,\n                \"quantity\": 10.5,\n                \"conversion_factor\": 10.5,\n                \"created_at\": \"2025-05-29 12:14:12\",\n                \"updated_at\": \"2025-05-29 12:14:12\",\n                \"product_images\": [\n                    {\n                        \"id\": 1,\n                        \"image\": \"example_image\",\n                        \"is_default\": false,\n                        \"created_at\": \"2025-05-29 12:14:12\",\n                        \"updated_at\": \"2025-05-29 12:14:12\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"Product updated successfully\"\n}"
                         }
                     ]
                 },
@@ -387,12 +395,13 @@
                             }
                         ],
                         "url": {
-                            "raw": "{{baseUrl}}/api/products/{{id}}",
+                            "raw": "{{baseUrl}}/api/v1/products/{{id}}",
                             "host": [
                                 "{{baseUrl}}"
                             ],
                             "path": [
                                 "api",
+                                "v1",
                                 "products",
                                 "{{id}}"
                             ]
@@ -421,12 +430,13 @@
                                     }
                                 ],
                                 "url": {
-                                    "raw": "{{baseUrl}}/api/products/{{id}}",
+                                    "raw": "{{baseUrl}}/api/v1/products/{{id}}",
                                     "host": [
                                         "{{baseUrl}}"
                                     ],
                                     "path": [
                                         "api",
+                                        "v1",
                                         "products",
                                         "{{id}}"
                                     ]
@@ -452,7 +462,7 @@
     "variable": [
         {
             "key": "baseUrl",
-            "value": "{{base-url}}",
+            "value": "{{base-url",
             "type": "string"
         },
         {
