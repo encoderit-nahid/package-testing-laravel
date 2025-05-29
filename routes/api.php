@@ -47,3 +47,5 @@ Route::apiResource('transfers', \App\Http\Controllers\TransferController::class)
 Route::apiResource('transfer_items', \App\Http\Controllers\TransferItemController::class);
 
 Route::apiResource('inventory_counts', \App\Http\Controllers\InventoryCountController::class);
+
+Route::apiResource('product_images', \App\Http\Controllers\ProductImagesController::class);
