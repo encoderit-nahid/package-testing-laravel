@@ -14,7 +14,7 @@ class InventoryCountRequest extends FormRequest
     public function rules(): array
     {
         return [
-                        'branch_id' => 'required|exists:branches,id',
+            'branch_id' => 'required|exists:branches,id',
             'product_id' => 'required|exists:products,id',
             'unit_id' => 'required|exists:units,id',
             'quantity' => 'required',

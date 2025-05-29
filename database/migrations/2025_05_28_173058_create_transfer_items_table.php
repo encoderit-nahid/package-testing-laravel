@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('unit_id')->constrained('units')->cascadeOnDelete();
             $table->double('quantity');
             $table->double('unit_price')->default(0);
-            
+
             $table->timestamps();
         });
     }

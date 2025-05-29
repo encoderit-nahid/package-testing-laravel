@@ -19,12 +19,14 @@ class RecipeService
     public function update($request, Recipe $recipe)
     {
         $recipe->update($request);
+
         return $recipe;
     }
 
     public function delete(Recipe $recipe)
     {
         $recipe->delete();
+
         return $recipe;
     }
 }

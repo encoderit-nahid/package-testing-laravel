@@ -19,12 +19,14 @@ class BrandService
     public function update($request, Brand $brand)
     {
         $brand->update($request);
+
         return $brand;
     }
 
     public function delete(Brand $brand)
     {
         $brand->delete();
+
         return $brand;
     }
 }

@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\BrandRequest;
 use App\Http\Resources\Brand\BrandCollection;
 use App\Http\Resources\Brand\BrandResource;
 use App\Models\Brand;
 use App\Services\BrandService;
 use App\Traits\ApiResponseTrait;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -17,7 +15,7 @@ class BrandController extends Controller implements HasMiddleware
 {
     use ApiResponseTrait;
 
-    public function __construct(protected BrandService $brandService){}
+    public function __construct(protected BrandService $brandService) {}
 
     public static function middleware(): array
     {
@@ -70,7 +68,7 @@ class BrandController extends Controller implements HasMiddleware
     public function destroy(Brand $brand): \Illuminate\Http\JsonResponse
     {
         try {
-             $this->brandService->delete($brand);
+            $this->brandService->delete($brand);
 
             return $this->success('Brand deleted successfully');
         } catch (\Exception $e) {

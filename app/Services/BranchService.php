@@ -19,12 +19,14 @@ class BranchService
     public function update($request, Branch $branch)
     {
         $branch->update($request);
+
         return $branch;
     }
 
     public function delete(Branch $branch)
     {
         $branch->delete();
+
         return $branch;
     }
 }

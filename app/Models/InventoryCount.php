@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class InventoryCount extends Model
 {
-
     protected $fillable = [
         'branch_id',
         'product_id',
@@ -15,7 +14,6 @@ class InventoryCount extends Model
         'count_date',
         'deleted_at',
     ];
-
 
     public function branch()
     {

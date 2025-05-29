@@ -19,12 +19,14 @@ class UnitService
     public function update($request, Unit $unit)
     {
         $unit->update($request);
+
         return $unit;
     }
 
     public function delete(Unit $unit)
     {
         $unit->delete();
+
         return $unit;
     }
 }

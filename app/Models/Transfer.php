@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transfer extends Model
 {
-
     protected $fillable = [
         'from_branch_id',
         'to_branch_id',
@@ -17,7 +16,6 @@ class Transfer extends Model
         'updated_by',
         'deleted_at',
     ];
-
 
     public function fromBranch()
     {

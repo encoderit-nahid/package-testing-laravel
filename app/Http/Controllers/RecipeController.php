@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\RecipeRequest;
 use App\Http\Resources\Recipe\RecipeCollection;
 use App\Http\Resources\Recipe\RecipeResource;
 use App\Models\Recipe;
 use App\Services\RecipeService;
 use App\Traits\ApiResponseTrait;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -17,7 +15,7 @@ class RecipeController extends Controller implements HasMiddleware
 {
     use ApiResponseTrait;
 
-    public function __construct(protected RecipeService $recipeService){}
+    public function __construct(protected RecipeService $recipeService) {}
 
     public static function middleware(): array
     {
@@ -70,7 +68,7 @@ class RecipeController extends Controller implements HasMiddleware
     public function destroy(Recipe $recipe): \Illuminate\Http\JsonResponse
     {
         try {
-             $this->recipeService->delete($recipe);
+            $this->recipeService->delete($recipe);
 
             return $this->success('Recipe deleted successfully');
         } catch (\Exception $e) {

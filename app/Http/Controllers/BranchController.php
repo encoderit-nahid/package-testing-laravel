@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\BranchRequest;
 use App\Http\Resources\Branch\BranchCollection;
 use App\Http\Resources\Branch\BranchResource;
 use App\Models\Branch;
 use App\Services\BranchService;
 use App\Traits\ApiResponseTrait;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -17,7 +15,7 @@ class BranchController extends Controller implements HasMiddleware
 {
     use ApiResponseTrait;
 
-    public function __construct(protected BranchService $branchService){}
+    public function __construct(protected BranchService $branchService) {}
 
     public static function middleware(): array
     {
@@ -70,7 +68,7 @@ class BranchController extends Controller implements HasMiddleware
     public function destroy(Branch $branch): \Illuminate\Http\JsonResponse
     {
         try {
-             $this->branchService->delete($branch);
+            $this->branchService->delete($branch);
 
             return $this->success('Branch deleted successfully');
         } catch (\Exception $e) {

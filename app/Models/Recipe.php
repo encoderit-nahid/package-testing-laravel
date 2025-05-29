@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Recipe extends Model
 {
-
     protected $fillable = [
         'name',
         'description',
@@ -15,7 +14,6 @@ class Recipe extends Model
         'created_by',
         'updated_by',
     ];
-
 
     //
 }

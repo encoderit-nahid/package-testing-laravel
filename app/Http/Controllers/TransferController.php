@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\TransferRequest;
 use App\Http\Resources\Transfer\TransferCollection;
 use App\Http\Resources\Transfer\TransferResource;
 use App\Models\Transfer;
 use App\Services\TransferService;
 use App\Traits\ApiResponseTrait;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -17,7 +15,7 @@ class TransferController extends Controller implements HasMiddleware
 {
     use ApiResponseTrait;
 
-    public function __construct(protected TransferService $transferService){}
+    public function __construct(protected TransferService $transferService) {}
 
     public static function middleware(): array
     {
@@ -70,7 +68,7 @@ class TransferController extends Controller implements HasMiddleware
     public function destroy(Transfer $transfer): \Illuminate\Http\JsonResponse
     {
         try {
-             $this->transferService->delete($transfer);
+            $this->transferService->delete($transfer);
 
             return $this->success('Transfer deleted successfully');
         } catch (\Exception $e) {

@@ -19,12 +19,14 @@ class TransferItemService
     public function update($request, TransferItem $transferItem)
     {
         $transferItem->update($request);
+
         return $transferItem;
     }
 
     public function delete(TransferItem $transferItem)
     {
         $transferItem->delete();
+
         return $transferItem;
     }
 }

@@ -19,12 +19,14 @@ class PurchaseService
     public function update($request, Purchase $purchase)
     {
         $purchase->update($request);
+
         return $purchase;
     }
 
     public function delete(Purchase $purchase)
     {
         $purchase->delete();
+
         return $purchase;
     }
 }

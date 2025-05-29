@@ -19,7 +19,7 @@ return new class extends Migration
             $table->double('quantity');
             $table->date('count_date');
             $table->softDeletes('deleted_at');
-            
+
             $table->timestamps();
         });
     }

@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
 use App\Http\Resources\Category\CategoryCollection;
 use App\Http\Resources\Category\CategoryResource;
 use App\Models\Category;
 use App\Services\CategoryService;
 use App\Traits\ApiResponseTrait;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -17,7 +15,7 @@ class CategoryController extends Controller implements HasMiddleware
 {
     use ApiResponseTrait;
 
-    public function __construct(protected CategoryService $categoryService){}
+    public function __construct(protected CategoryService $categoryService) {}
 
     public static function middleware(): array
     {
@@ -70,7 +68,7 @@ class CategoryController extends Controller implements HasMiddleware
     public function destroy(Category $category): \Illuminate\Http\JsonResponse
     {
         try {
-             $this->categoryService->delete($category);
+            $this->categoryService->delete($category);
 
             return $this->success('Category deleted successfully');
         } catch (\Exception $e) {

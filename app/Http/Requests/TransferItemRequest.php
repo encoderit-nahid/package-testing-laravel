@@ -14,7 +14,7 @@ class TransferItemRequest extends FormRequest
     public function rules(): array
     {
         return [
-                        'transfer_id' => 'required|exists:transfers,id',
+            'transfer_id' => 'required|exists:transfers,id',
             'product_id' => 'required|exists:products,id',
             'unit_id' => 'required|exists:units,id',
             'quantity' => 'required',

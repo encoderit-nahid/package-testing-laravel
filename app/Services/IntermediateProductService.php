@@ -19,12 +19,14 @@ class IntermediateProductService
     public function update($request, IntermediateProduct $intermediateProduct)
     {
         $intermediateProduct->update($request);
+
         return $intermediateProduct;
     }
 
     public function delete(IntermediateProduct $intermediateProduct)
     {
         $intermediateProduct->delete();
+
         return $intermediateProduct;
     }
 }

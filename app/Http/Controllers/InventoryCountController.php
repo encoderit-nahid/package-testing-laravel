@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\InventoryCountRequest;
 use App\Http\Resources\InventoryCount\InventoryCountCollection;
 use App\Http\Resources\InventoryCount\InventoryCountResource;
 use App\Models\InventoryCount;
 use App\Services\InventoryCountService;
 use App\Traits\ApiResponseTrait;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -17,7 +15,7 @@ class InventoryCountController extends Controller implements HasMiddleware
 {
     use ApiResponseTrait;
 
-    public function __construct(protected InventoryCountService $inventoryCountService){}
+    public function __construct(protected InventoryCountService $inventoryCountService) {}
 
     public static function middleware(): array
     {
@@ -70,7 +68,7 @@ class InventoryCountController extends Controller implements HasMiddleware
     public function destroy(InventoryCount $inventoryCount): \Illuminate\Http\JsonResponse
     {
         try {
-             $this->inventoryCountService->delete($inventoryCount);
+            $this->inventoryCountService->delete($inventoryCount);
 
             return $this->success('InventoryCount deleted successfully');
         } catch (\Exception $e) {

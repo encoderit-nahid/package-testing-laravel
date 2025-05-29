@@ -19,12 +19,14 @@ class TransferService
     public function update($request, Transfer $transfer)
     {
         $transfer->update($request);
+
         return $transfer;
     }
 
     public function delete(Transfer $transfer)
     {
         $transfer->delete();
+
         return $transfer;
     }
 }

@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-
     protected $fillable = [
         'name',
         'code',
@@ -17,7 +16,6 @@ class Category extends Model
         'created_by',
         'updated_by',
     ];
-
 
     public function parent()
     {

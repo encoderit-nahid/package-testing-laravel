@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class TransferItem extends Model
 {
-
     protected $fillable = [
         'transfer_id',
         'product_id',
@@ -14,7 +13,6 @@ class TransferItem extends Model
         'quantity',
         'unit_price',
     ];
-
 
     public function transfer()
     {

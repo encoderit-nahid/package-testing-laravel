@@ -20,7 +20,7 @@ return new class extends Migration
             $table->boolean('is_default')->default(false);
             $table->foreignId('created_by')->nullable()->constrained('users')->cascadeOnDelete();
             $table->foreignId('updated_by')->nullable()->constrained('users')->cascadeOnDelete();
-            
+
             $table->timestamps();
         });
     }

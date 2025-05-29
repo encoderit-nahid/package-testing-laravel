@@ -25,7 +25,7 @@ return new class extends Migration
             $table->foreignId('manager_id')->nullable()->constrained('users')->cascadeOnDelete();
             $table->foreignId('created_by')->nullable()->constrained('users')->cascadeOnDelete();
             $table->foreignId('updated_by')->nullable()->constrained('users')->cascadeOnDelete();
-            
+
             $table->timestamps();
         });
     }

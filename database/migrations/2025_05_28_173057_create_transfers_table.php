@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreignId('created_by')->nullable()->constrained('users')->cascadeOnDelete();
             $table->foreignId('updated_by')->nullable()->constrained('users')->cascadeOnDelete();
             $table->softDeletes('deleted_at');
-            
+
             $table->timestamps();
         });
     }

@@ -14,7 +14,7 @@ class TransferRequest extends FormRequest
     public function rules(): array
     {
         return [
-                        'from_branch_id' => 'required|exists:branches,id',
+            'from_branch_id' => 'required|exists:branches,id',
             'to_branch_id' => 'required|exists:branches,id',
             'transfer_date' => 'nullable',
             'status' => 'required|string',

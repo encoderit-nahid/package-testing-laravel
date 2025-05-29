@@ -14,7 +14,7 @@ class ProductImagesRequest extends FormRequest
     public function rules(): array
     {
         return [
-                        'product_unit_id' => 'required|exists:product_units,id',
+            'product_unit_id' => 'required|exists:product_units,id',
             'image' => 'required|string',
             'is_default' => 'required|boolean',
         ];

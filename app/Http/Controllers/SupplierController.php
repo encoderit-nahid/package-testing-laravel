@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\SupplierRequest;
 use App\Http\Resources\Supplier\SupplierCollection;
 use App\Http\Resources\Supplier\SupplierResource;
 use App\Models\Supplier;
 use App\Services\SupplierService;
 use App\Traits\ApiResponseTrait;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -17,7 +15,7 @@ class SupplierController extends Controller implements HasMiddleware
 {
     use ApiResponseTrait;
 
-    public function __construct(protected SupplierService $supplierService){}
+    public function __construct(protected SupplierService $supplierService) {}
 
     public static function middleware(): array
     {
@@ -70,7 +68,7 @@ class SupplierController extends Controller implements HasMiddleware
     public function destroy(Supplier $supplier): \Illuminate\Http\JsonResponse
     {
         try {
-             $this->supplierService->delete($supplier);
+            $this->supplierService->delete($supplier);
 
             return $this->success('Supplier deleted successfully');
         } catch (\Exception $e) {

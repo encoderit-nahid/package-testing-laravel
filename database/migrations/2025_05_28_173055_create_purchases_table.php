@@ -18,7 +18,7 @@ return new class extends Migration
             $table->date('purchase_date');
             $table->string('invoice_number')->nullable();
             $table->string('status')->default('pending');
-            
+
             $table->timestamps();
         });
     }

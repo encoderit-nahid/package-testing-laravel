@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('from_unit_id')->constrained('units')->cascadeOnDelete();
             $table->foreignId('to_unit_id')->constrained('units')->cascadeOnDelete();
             $table->double('multiplier')->default(1);
-            
+
             $table->timestamps();
         });
     }

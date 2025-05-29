@@ -6,13 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class IntermediateProduct extends Model
 {
-
     protected $fillable = [
         'product_id',
         'name',
         'yield',
     ];
-
 
     public function product()
     {
