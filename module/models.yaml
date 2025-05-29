@@ -42,7 +42,7 @@ Product:
 #      model: User
 
 ProductUnit:
-  # and nested validation rule and postman request body
+  # and nested validation rule and Postman request body
   requestParent: Product
   generate:
     controller: false
@@ -72,7 +72,7 @@ ProductUnit:
       model: Supplier
 
 ProductImages:
-  # and nested validation rule and postman request body
+  # and nested validation rule and Postman request body
   requestParent: ProductUnit
   generate:
     controller: true
